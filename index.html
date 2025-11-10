@@ -123,8 +123,83 @@
       .skills-grid { grid-template-columns: 1fr; }
       .hero .photo { display:none; }
     }
+    /* ====== Tablet View (max-width: 980px) ====== */
+@media (max-width: 980px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 
-  </style>
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero .photo {
+    margin: auto;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ====== Mobile View (max-width: 600px) ====== */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    padding: 12px 20px;
+  }
+
+  .brand {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    display: none; /* optional – you can later add a hamburger menu */
+  }
+
+  .cta {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .hero .intro h1 {
+    font-size: 28px;
+  }
+
+  .intro p {
+    font-size: 0.95rem;
+  }
+
+  .skills-grid,
+  .services-grid,
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo {
+    width: 220px;
+    height: 220px;
+  }
+
+  .footer .links {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+ </style>
 </head>
 <body>
   <header>
@@ -694,4 +769,3 @@
 </body>
 
 </html>
-
